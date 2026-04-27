@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Timetable</title>
+
+<link rel="stylesheet" href="college.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="nav-content">
+    <h2>📚 Timetable Generator</h2>
+    <button class="home-btn" onclick="goHome()">🏠 Home</button>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- COLLEGE DETAILS -->
+  <div class="card full-width">
+    <h3>🏫 College Details</h3>
+
+    <input type="text" id="collegeName" placeholder="College Name">
+    <input type="text" id="collegeAddress" placeholder="Address">
+    <input type="text" id="department" placeholder="Department">
+    <input type="text" id="classSection" placeholder="Class / Section">
+    <input type="text" id="roomNo" placeholder="Room No">
+  </div>
+
+  <div class="grid">
+
+    <!-- SETTINGS -->
+    <div class="card">
+      <h3>⚙️ Settings</h3>
+
+      <label>Working Days</label>
+      <input type="number" id="days" value="6">
+
+      <label>Periods per Day</label>
+      <input type="number" id="periods" value="7">
+    </div>
+
+    <!-- SUBJECT -->
+    <div class="card">
+      <h3>➕ Add Subject</h3>
+
+      <input type="text" id="subjectName" placeholder="Subject">
+      <input type="text" id="teacherName" placeholder="Faculty">
+      
+      <select id="daySelect">
+        <option>Monday</option>
+        <option>Tuesday</option>
+        <option>Wednesday</option>
+        <option>Thursday</option>
+        <option>Friday</option>
+        <option>Saturday</option>
+      </select>
+
+      <input type="number" id="periodNumber" placeholder="Start Period">
+<h3>⏰ Time Slots</h3>
+<input type="text" id="timeSlotsInput" 
+placeholder="Example: 9-10,10-11,11-12,LUNCH,1-2,2-3,3-4">
+      <button onclick="addSubject()">Add</button>
+    </div>
+    <!-- EDIT / DELETE CONTROLS -->
+<div class="card">
+  <h3>✏️ Manage Subjects</h3>
+
+  <select id="subjectDropdown">
+    <option value="">Select Subject</option>
+  </select>
+
+  <div class="edit-buttons">
+    <button onclick="editSelected()">✏️ Edit</button>
+    <button onclick="deleteSelected()">🗑️ Delete</button>
+  </div>
+</div>
+
+  </div>
+
+  <ul id="subjectList"></ul>
+
+  <button onclick="generateTimetable()" class="gd">Generate Timetable</button>
+
+  <div class="action-buttons">
+    <button onclick="saveAsPDF()">PDF</button>
+    <button onclick="saveAsExcel()">Excel</button>
+    <button onclick="saveAsImage()">Image</button>
+    <button onclick="clearTimetable()">Clear</button>
+  </div>
+
+  <div id="output"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* BODY */
+body {
+  background: #eef2f7;
+  color: #1f2937;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #1e293b;
+  color: white;
+  padding: 30px 20px;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.home-btn:hover {
+  background: #2563eb;
+}
+
+/* CONTAINER */
+.container {
+  padding: 20px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+/* CARD */
+
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #1e3a8a;
+}
+
+/* ===== COMMON UI STYLE ===== */
+
+/* INPUT + SELECT */
+input, select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  font-size: 14px;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+input:hover, select:hover {
+  border-color: #2563eb;
+  background: #ffffff;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #2563eb;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* BUTTON */
+button {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.3);
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-top: 10px;
+}
+/* ACTION BUTTONS */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.action-buttons button {
+  flex: 1;
+  min-width: 110px;
+}
+
+/* COLLEGE HEADER */
+.college-header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.college-header h2 {
+  color: #1e3a8a;
+}
+
+.college-header p {
+  font-size: 14px;
+  color: #475569;
+}
+
+/* TIMETABLE BOX */
+.timetable-box {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+/* HEADERS */
+th {
+  background: #1e40af;
+  color: white;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+}
+
+/* CELLS */
+td {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  text-align: center;
+  font-size: 13px;
+  background: #f1f5f9;
+}
+
+/* DAY COLUMN */
+.day {
+  background: #e2e8f0;
+  font-weight: 600;
+}
+
+/* LUNCH */
+.lunch {
+  background: #fde68a;
+  color: #92400e;
+  font-weight: bold;
+}
+
+/* CLICKABLE */
+.clickable {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.clickable:hover {
+  background: #dbeafe;
+}
+
+/* FACULTY TABLE */
+.faculty-title {
+  margin-top: 20px;
+  text-align: center;
+  color: #1e3a8a;
+}
+
+.faculty-table th {
+  background: #3b82f6;
+  color: white;
+}
+
+.faculty-table td {
+  background: #f8fafc;
+}
+
+/* EDIT BUTTONS */
+.edit-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.edit-buttons button {
+  flex: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  table {
+    font-size: 12px;
+  }
+}
+.gd{
+  margin-top: 10px;
+}

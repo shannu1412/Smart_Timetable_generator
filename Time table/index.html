@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timetable Generator</title>
+
+<link rel="stylesheet" href="index.css">
+<style>
+.home-title {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Cards Layout */
+.card-container {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+/* Card Style */
+.home-card {
+  width: 280px;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.home-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Titles */
+.home-card h2 {
+  color: #4f7de0;
+}
+
+/* Responsive */
+@media(max-width: 900px){
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <h2>📚 Timetable Generator</h2>
+</div>
+
+<div class="container">
+
+  <h1 class="home-title">Choose Your Planner</h1>
+
+  <div class="card-container">
+
+    <!-- College -->
+    <div class="home-card" onclick="goToPage('college.html')">
+      <h2>🎓 College Timetable</h2>
+      <p>Create and manage your college schedule</p>
+    </div>
+
+    <!-- Daily -->
+    <div class="home-card" onclick="goToPage('daily.html')">
+      <h2>📅 Daily Schedule</h2>
+      <p>Plan your everyday tasks efficiently</p>
+    </div>
+
+    <!-- Exam -->
+    <div class="home-card" onclick="goToPage('exam.html')">
+      <h2>📝 Exam Preparation</h2>
+      <p>Organize study time and exam plans</p>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+function goToPage(page){
+  window.location.href = page;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exam Schedule</title>
+
+<link rel="stylesheet" href="exam.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="nav-content">
+    <h2>📝 Exam Schedule</h2>
+    <button onclick="goHome()">🏠 Home</button>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- ADD EXAM -->
+  <div class="card">
+    <h3>➕ Add Exam</h3>
+
+    <input type="text" id="subject" placeholder="Subject">
+    <input type="date" id="date">
+    <input type="time" id="time">
+    <input type="text" id="room" placeholder="Room No">
+
+    <button onclick="addExam()">Add Exam</button>
+  </div>
+
+  <!-- OUTPUT -->
+  <div class="card" id="exportArea">
+    <h3>📋 Exam Timetable</h3>
+
+    <table id="examTable">
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Room</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- ACTION BUTTONS -->
+  <div class="action-buttons">
+    <button onclick="saveAsPDF()">📄 PDF</button>
+    <button onclick="saveAsExcel()">📊 Excel</button>
+    <button onclick="saveAsImage()">🖼️ Image</button>
+  </div>
+
+</div>
+
+<script src="exam.js"></script>
+</body>
+</html>

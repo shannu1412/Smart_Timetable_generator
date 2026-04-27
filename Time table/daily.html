@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Planner</title>
+
+<link rel="stylesheet" href="daily.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+
+<div class="navbar">
+  <div class="nav-content">
+    <h2>📝 Daily Planner</h2>
+    <button onclick="goHome()">🏠 Home</button>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>📅 Today</h3>
+      <p id="todayDate"></p>
+    </div>
+
+    <div class="card">
+      <h3>➕ Add Task</h3>
+      <input type="text" id="taskInput" placeholder="Enter task">
+      <input type="time" id="taskTime">
+
+      <select id="taskPriority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+
+      <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <!-- TASK SECTION (EXPORT ONLY THIS) -->
+    <div class="card" id="exportArea">
+      <h3>📋 Tasks</h3>
+      <ul id="taskList"></ul>
+    </div>
+
+    <div class="card">
+      <h3>📅 Calendar</h3>
+      <input type="date" id="calendarDate" onchange="loadByDate()">
+      <ul id="calendarTasks"></ul>
+    </div>
+
+  </div>
+
+  <div class="action-buttons">
+    <button onclick="saveAsPDF()">📄 PDF</button>
+    <button onclick="saveAsExcel()">📊 Excel</button>
+    <button onclick="saveAsImage()">🖼️ Image</button>
+  </div>
+
+</div>
+
+<script src="daily.js"></script>
+</body>
+</html>
