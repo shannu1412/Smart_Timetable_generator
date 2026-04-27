@@ -26,4 +26,7 @@ Smart Timetable Generator is a web application designed to automate timetable cr
 - Database integration
 
 ## Author
-Your Name
+Our Team:
+- Ch. Alekya
+- K. Shanmukha
+- M. Raghavendra
